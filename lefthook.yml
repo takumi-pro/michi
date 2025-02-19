@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    frontend:
+      root: frontend/
+      glob: "*.{ts,tsx}"
+      run: npx biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
