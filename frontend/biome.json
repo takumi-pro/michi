@@ -17,7 +17,8 @@
 			"dist",
 			"build",
 			"public",
-			".react-router"
+			".react-router",
+			"components/ui"
 		],
 		"include": ["app/**/*.ts", "app/**/*.tsx"]
 	},
