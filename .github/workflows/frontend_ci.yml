@@ -1,5 +1,5 @@
 # TODO: cursorに生成したものなので精査する
-name: CI
+name: Frontend CI
 
 on:
   pull_request:

@@ -1,0 +1,14 @@
+name: Backend CI
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+
+jobs:
+  dummy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo "dummy"
