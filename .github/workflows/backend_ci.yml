@@ -7,9 +7,16 @@ on:
     paths:
       - "backend/**"
 
+defaults:
+  run:
+    working-directory: ./backend
+
 jobs:
   scan_ruby:
     runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     working-directory: ./backend
 
     steps:
       - name: Checkout code
@@ -18,7 +25,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ./backend/.ruby-version
+          ruby-version: .ruby-version
           bundler-cache: true
 
       - name: Scan for common Rails security vulnerabilities using static analysis
@@ -26,6 +33,9 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     working-directory: ./backend
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -41,6 +51,10 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     working-directory: ./backend
+
     services:
       mysql:
         image: mysql
