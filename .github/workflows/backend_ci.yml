@@ -66,6 +66,7 @@ jobs:
 
     steps:
       - name: Install packages
+        working-directory: . # Run this step in the root directory
         run: sudo apt-get update && sudo apt-get install --no-install-recommends -y build-essential default-libmysqlclient-dev git libyaml-dev pkg-config
 
       - name: Checkout code
