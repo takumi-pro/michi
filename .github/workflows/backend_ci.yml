@@ -79,6 +79,14 @@ jobs:
           working-directory: ./backend
           bundler-cache: true
 
+      - name: Create and migrate database
+        env:
+          RAILS_ENV: test
+          DATABASE_URL: mysql2://root@127.0.0.1:3306 # Use root as user since password is empty
+        run: |
+          bin/rails db:create
+          bin/rails db:migrate
+
       - name: Run tests
         env:
           RAILS_ENV: test
