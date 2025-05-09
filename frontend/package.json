@@ -17,7 +17,7 @@
 	},
 	"dependencies": {
 		"@radix-ui/react-slot": "^1.2.0",
-		"@react-router/fs-routes": "^7.5.2",
+		"@react-router/fs-routes": "^7.6.0",
 		"@react-router/node": "^7.1.5",
 		"@react-router/serve": "^7.1.5",
 		"@xyflow/react": "^12.6.0",
